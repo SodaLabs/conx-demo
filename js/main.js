@@ -17,6 +17,18 @@
       updateRecordStatus(recordStatus);
     });
 
+    // handle click to show popup info
+    calleeContainer.addEventListener("click", function(evt) {
+      showPopUp(0);
+    });
+
+    // handle click to close popup info
+    var closeButton = document.getElementById('popup-close');
+    closeButton.addEventListener("click", function(evt) {
+      var root = document.getElementById('popup-root');
+      root.hidden = true;
+    });
+
     //Handle the record button
     var recordButton = document.querySelector(".record-button");
     recordButton.addEventListener("click", function(evt) {
@@ -58,5 +70,10 @@
       recordStatus.innerHTML = "Recording is off.";
       recordButton.src = 'images/normal.png';
     }
+  }
+
+  function showPopUp(index) {
+    var root = document.getElementById('popup-root');
+    root.hidden = false;
   }
 })();
