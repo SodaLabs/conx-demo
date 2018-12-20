@@ -64,7 +64,8 @@
 }
 
 .callee {
-  width: 50%;
+  position: relative;
+  width: 345px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -167,14 +168,15 @@ input[type=checkbox]:checked + label {
 }
 
 #popup-root {
-  position: fixed;
+  position: absolute;
   width: 345px;
   height: 200px;
   border-radius: 14px;
   box-shadow: 0 12px 35px 0 rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
-  left: 134px;
-  top: 211px;
+  left: 0px;
+  top: 0px;
+  z-index: 25;
 }
 
 #popup-close {

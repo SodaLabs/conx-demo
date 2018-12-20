@@ -27,6 +27,7 @@
     closeButton.addEventListener("click", function(evt) {
       var root = document.getElementById('popup-root');
       root.hidden = true;
+      evt.stopPropagation();
     });
 
     //Handle the record button
