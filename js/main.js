@@ -19,7 +19,11 @@
 
     // handle click to show popup info
     calleeContainer.addEventListener("click", function(evt) {
-      showPopUp(0);
+      if (evt.target.classList.contains('callee') ||
+          evt.target.classList.contains('callee-photo') ||
+          evt.target.classList.contains('callee-name')) {
+        showPopUp(0);
+      }
     });
 
     // handle click to close popup info
